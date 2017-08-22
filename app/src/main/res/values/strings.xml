@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Bhaskara</string>
+    <string name="sobreTitle">Desenvolvedores</string>
+    <string name="devs">Daniel Menegasso \nDanilo de Maria \nGuilherme Abraham</string>
+    <string name="empresa">Amdemassh@gmail.com\ndaniloctg@msn.com\ndanielmenegasso@gmail.com\nguilhermeabraham93@gmail.com</string>
+    <string name="facebook">Facebook</string>
+    <string name="facebookDaniel">Daniel Menegasso\nhttps://www.facebook.com/axestoaxes</string>
+    <string name="facebookDanilo">Danilo de Maria\nhttps://www.facebook.com/Danilodemaria1993</string>
+    <string name="versao">Amdema SSH   Versão 1.0</string>
+</resources>
