@@ -7,4 +7,11 @@
     <string name="facebookDaniel">Daniel Menegasso\nhttps://www.facebook.com/axestoaxes</string>
     <string name="facebookDanilo">Danilo de Maria\nhttps://www.facebook.com/Danilodemaria1993</string>
     <string name="versao">Amdema SSH   Versão 1.0</string>
+    <string name="calcula_bhaskara">Calcula Bhaskara</string>
+    <string name="valorA">Valor de A</string>
+    <string name="valorB">Valor de B</string>
+    <string name="valorC">Valor de C</string>
+    <string name="calcular">Calcular</string>
+    <string name="limpar_campos">Limpar Campos</string>
+    <string name="sobre">Sobre</string>
 </resources>

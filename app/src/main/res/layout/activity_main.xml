@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Calcula Bhaskara"
+        android:text="@string/calcula_bhaskara"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="Valor de A"
+            android:text="@string/valorA"
             android:textColor="@android:color/black"
             android:textAlignment="center"
 />
@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Valor de B"
+            android:text="@string/valorB"
             android:id="@+id/textView3"
             android:layout_weight="0.5"
             android:textAlignment="center"
@@ -48,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Valor de C"
+            android:text="@string/valorC"
             android:id="@+id/textView4"
             android:layout_weight="0.5"
             android:textAlignment="center"
@@ -60,8 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/valoresABC"
-        android:layout_below="@+id/textoValores"
-        android:layout_marginTop="10dp">
+        android:layout_below="@+id/textoValores">
 
         <EditText
             android:id="@+id/valorA"
@@ -70,7 +69,9 @@
             android:layout_weight="0.5"
             android:ems="10"
             android:inputType="numberSigned"
-            android:textAlignment="center" />
+            android:textAlignment="center" >
+            <requestFocus/>
+        </EditText>
 
         <EditText
             android:layout_width="wrap_content"
@@ -105,7 +106,7 @@
         android:layout_marginBottom="40dp"
         android:layout_marginTop="40dp"
         android:onClick="calcula"
-        android:text="Calcular"
+        android:text="@string/calcular"
         android:textSize="15sp" />
 
     <LinearLayout
@@ -144,7 +145,7 @@
         android:id="@+id/camposX"
         android:layout_below="@id/textosX">
 
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -155,7 +156,7 @@
             android:textStyle="bold"
             />
 
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -182,7 +183,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
         android:onClick="limpaCampos"
-        android:text="Limpar Campos"
+        android:text="@string/limpar_campos"
         android:textSize="15sp" />
 
     <Button

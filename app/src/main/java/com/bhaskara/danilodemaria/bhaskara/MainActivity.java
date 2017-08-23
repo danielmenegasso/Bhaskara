@@ -1,5 +1,6 @@
 package com.bhaskara.danilodemaria.bhaskara;
 
+import android.app.Activity;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,56 +12,64 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
+
+import java.math.RoundingMode;
+import java.text.NumberFormat;
 
 import static com.bhaskara.danilodemaria.bhaskara.R.layout.*;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     private EditText valorA;
     private EditText valorB;
     private EditText valorC;
-    private EditText x1;
-    private EditText x2;
+    private TextView x1;
+    private TextView x2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(activity_main);
+        setContentView(R.layout.activity_main);
 
         valorA = (EditText)findViewById(R.id.valorA);
         valorB = (EditText)findViewById(R.id.valorB);
         valorC = (EditText)findViewById(R.id.valorC);
-        x1 = (EditText)findViewById(R.id.x1);
-        x2 = (EditText)findViewById(R.id.x2);
+        x1 = (TextView)findViewById(R.id.x1);
+        x2 = (TextView)findViewById(R.id.x2);
 
         Button button = (Button)findViewById(R.id.button);
     }
 
     public void calcula(View view) {
+            double valorX1 = 0, valorX2 = 0, a, b, c, d;
+            a = Double.parseDouble(valorA.getText().toString());
+            b = Double.parseDouble(valorB.getText().toString());
+            c = Double.parseDouble(valorC.getText().toString());
 
-        double valorX1 = 0,valorX2 = 0,a,b,c,d;
-        a = Double.parseDouble(valorA.getText().toString());
-        b = Double.parseDouble(valorB.getText().toString());
-        c = Double.parseDouble(valorC.getText().toString());
 
+            d = (b * b) - 4 * a * c;
 
-        d = (b * b) - 4* a * c;
+            if (d < 0) {
+                Toast.makeText(this, "O valor de delta é menor que zero", Toast.LENGTH_LONG).show();
+            } else {
+                NumberFormat format = NumberFormat.getInstance();
+                format.setMaximumFractionDigits(4);
+                format.setMinimumFractionDigits(2);
+                format.setMaximumIntegerDigits(2);
+                format.setRoundingMode(RoundingMode.HALF_UP);
 
-        if (d < 0)
-        {
-            Toast.makeText(this ,"O valor de delta é menor que zero", Toast.LENGTH_LONG);
+                valorX1 = (-b + Math.sqrt(d)) / (2 * a);
+                valorX2 = (-b - Math.sqrt(d)) / (2 * a);
+
+                x1.setText(String.valueOf(format.format(valorX1)));
+                x2.setText(String.valueOf(format.format(valorX2)));
+            }
+
         }
-
-        else
-        {
-            valorX1 = (-b + Math.sqrt(d))/(2 * a);
-            valorX2 = (-b - Math.sqrt(d))/(2 * a);
-        }
-
-        x1.setText(String.valueOf(valorX1));
-        x2.setText(String.valueOf(valorX2));
-    }
 
     public void limpaCampos (View view){
         x1.setText(null);
@@ -68,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         valorA.setText(null);
         valorB.setText(null);
         valorC.setText(null);
+        valorA.requestFocus();
     }
 
     public void popup(View view) {
