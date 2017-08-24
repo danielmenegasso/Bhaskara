@@ -45,6 +45,13 @@ public class MainActivity extends Activity {
     }
 
     public void calcula(View view) {
+        if (valorA.getText().length() == 0) {
+            valorA.setError("Campo Vazio");
+        } else if (valorB.getText().length() == 0) {
+            valorB.setError("Campo Vazio");
+        } else if (valorC.getText().length() == 0) {
+            valorC.setError("Campo Vazio");
+        } else {
             double valorX1 = 0, valorX2 = 0, a, b, c, d;
             a = Double.parseDouble(valorA.getText().toString());
             b = Double.parseDouble(valorB.getText().toString());
@@ -70,6 +77,7 @@ public class MainActivity extends Activity {
             }
 
         }
+    }
 
     public void limpaCampos (View view){
         x1.setText(null);
