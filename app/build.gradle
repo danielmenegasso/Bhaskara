@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "26.0.1"
+    compileSdkVersion 27
+    buildToolsVersion "27"
 
     defaultConfig {
-        applicationId "com.bhaskara.danilodemaria.bhaskara"
-        minSdkVersion 15
-        targetSdkVersion 23
+        applicationId 'com.bhaskara.michael.bhaskara'
+        minSdkVersion 9
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
     }

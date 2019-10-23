@@ -1,4 +1,4 @@
-package com.bhaskara.danilodemaria.bhaskara;
+package com.bhaskara.michael.bhaskara;
 
 import org.junit.Test;
 

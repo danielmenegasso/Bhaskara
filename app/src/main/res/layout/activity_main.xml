@@ -186,15 +186,6 @@
         android:text="@string/limpar_campos"
         android:textSize="15sp" />
 
-    <Button
-        android:id="@+id/sobre"
-        style="@android:style/Widget.Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.5"
-        android:onClick="popup"
-        android:text="Sobre"
-        android:textSize="15sp" />
 
 </LinearLayout>
 
